@@ -1,0 +1,13 @@
+app.get("/api/courses", (req, res) => {
+  res.send([1, 2, 3, 4, 5]);
+});
+
+//to seacrh for a given parameter
+app.get("/api/courses/:book", (req, res) => {
+  res.send("The book name is:   " + req.params.book);
+});
+
+//to search for multiple paramters
+app.get("/api/posts/:year/:month", (req, res) => {
+  res.send(req.params.year + "<br/>" + req.params.month);
+});
